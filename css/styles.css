@@ -20,14 +20,47 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--white-bgr);
   color: var(--text-font-color);
+  display: block;
+}
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
 }
 .list,
 ul,
 ol {
   list-style: none;
 }
-.link{
+.link {
   text-decoration: none;
+}
+/**
+  |============================
+  | Base stayles
+  |============================
+*/
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.conteiner {
+  width: 1158;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /**
   |============================
@@ -35,8 +68,17 @@ ol {
   |============================
 */
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-nav {
+  display: flex;
+  align-items: center;
 }
 .header-logo {
   font-family: 'Raleway', sans-serif;
@@ -46,6 +88,7 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-color);
+  padding-right: 76px;
 }
 .header-logo-black {
   font-style: normal;
@@ -53,6 +96,11 @@ ol {
   color: var(--text-dark-color);
 }
 .header-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: 0;
+  padding-right: 332px;
 }
 .header-item {
 }
@@ -65,7 +113,7 @@ ol {
 }
 .header-link:hover,
 .header-link:focus {
-  color:var(--focus-color);
+  color: var(--focus-color);
   text-decoration: underline;
 }
 .header-contacts {
@@ -73,6 +121,10 @@ ol {
 }
 .header-contacts-list {
   list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: 0;
 }
 .header-contacts-item {
 }
@@ -81,18 +133,14 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color:var(--text-font-color);
+  color: var(--text-font-color);
 }
 .header-contacts-link:hover,
 .header-contacts-link:focus {
-  color:var(--focus-color); 
+  color: var(--focus-color);
   text-decoration: underline;
 }
-/**
-  |============================
-  | Base stayles
-  |============================
-*/
+
 /**
   |============================
   | Main stayles
@@ -101,6 +149,9 @@ ol {
 .main {
 }
 .hero {
+  padding-top: 188px;
+  padding-bottom: 292px;
+  justify-content: center;
   background-color: var(--dark-bgr);
 }
 .hero-title {
@@ -120,10 +171,28 @@ ol {
   cursor: pointer;
   color: var(--white-color);
   background-color: var(--logo-color);
+  display: flex;
+  border-radius: 4px;
+  align-items: flex-start;
+  
+  padding: 16px 32px;
+  gap: 10px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--focus-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .feature {
 }
@@ -137,13 +206,13 @@ ol {
 .feature-subtitle {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.20;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--text-dark-color);
 }
 .feature-text {
   font-size: 16px;
-  line-height: 1.50;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-font-color);
 }
@@ -156,7 +225,7 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: var(--text-dark-color) ;
+  color: var(--text-dark-color);
 }
 .works-list {
 }
@@ -175,10 +244,10 @@ ol {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--text-dark-color);
-  background-color: var(--white-bgr) ;
+  background-color: var(--white-bgr);
 }
 .team-list {
- }
+}
 .team-item {
   background-color: var(--white-bgr);
 }
@@ -193,7 +262,7 @@ ol {
 }
 .team-text {
   font-size: 16px;
-  line-height: 1.50;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-font-color);
 }
@@ -245,7 +314,7 @@ ol {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color:var(--text-font-color);
+  color: var(--text-font-color);
 }
 /**
   |============================
@@ -253,11 +322,13 @@ ol {
   |============================
 */
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--dark-bgr);
   text-decoration: none;
 }
 .footer-logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -266,7 +337,7 @@ ol {
   color: var(--logo-color);
 }
 .footer-logo-white {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
