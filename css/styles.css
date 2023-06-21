@@ -10,6 +10,7 @@
   --focus-color: #404bbf;
   --text-dark-color: #2e2f42;
   --logo-color: #4d5ae5;
+  --cornflower: #E7E9FC;
 }
 /**
   |============================
@@ -21,6 +22,8 @@ body {
   background-color: var(--white-bgr);
   color: var(--text-font-color);
   display: block;
+  margin: 0,auto;
+  padding: 0,15px;
 }
 /* Reset */
 *,
@@ -43,6 +46,11 @@ ul,
 ol {
   list-style: none;
 }
+img{
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
 .link {
   text-decoration: none;
 }
@@ -56,11 +64,9 @@ section {
   padding-bottom: 60px;
 }
 .conteiner {
-  width: 1158;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  min-width: 1158;
+  margin:0 auto;
+  padding:0,15px;
 }
 /**
   |============================
@@ -70,6 +76,8 @@ section {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid var(--cornflower);
+  background:var(--white-bgr);
 }
 .header-conteiner {
   display: flex;
@@ -149,12 +157,19 @@ section {
 .main {
 }
 .hero {
-  padding-top: 188px;
-  padding-bottom: 292px;
-  justify-content: center;
+  margin: 0, auto;
   background-color: var(--dark-bgr);
 }
+.hero-conteiner{
+  display: block;
+  justify-content: center;
+
+}
 .hero-title {
+  display: block;
+  flex-direction: column;
+  min-width: 496px;
+  padding-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -171,28 +186,15 @@ section {
   cursor: pointer;
   color: var(--white-color);
   background-color: var(--logo-color);
-  display: flex;
-  border-radius: 4px;
-  align-items: flex-start;
+  display: inline-block;
+  padding: 16px, 32px;
+  margin-bottom: ;
+
   
-  padding: 16px 32px;
-  gap: 10px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--focus-color);
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 .feature {
 }
@@ -275,7 +277,17 @@ section {
 }
 .portfolio-section {
 }
-.portfolio-hero {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+ white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .portfolio-list-btn {
 }
