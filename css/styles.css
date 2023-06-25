@@ -11,6 +11,7 @@
   --text-dark-color: #2e2f42;
   --logo-color: #4d5ae5;
   --cornflower: #E7E9FC;
+  --standart-border-cl: #e7e9fc;
   /* The main number of elements in Flexbox grid */
   --items: 3;
   /* The main gap indent in Flexbox grid */
@@ -72,7 +73,7 @@ section {
   padding-bottom: 60px;
   margin: 0 auto;
 }
-.conteiner {
+.container {
   max-width: 1158px;
   margin: 0 auto;
   padding-left: 15px;
@@ -90,7 +91,7 @@ section {
   border-bottom: 1px solid var(--cornflower);
   background:var(--white-bgr);
 }
-.header-conteiner {
+.header-container {
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -107,7 +108,7 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-color);
-  padding-right: 76px;
+  margin-right: 76px;
 }
 .header-logo-black {
   font-style: normal;
@@ -124,10 +125,10 @@ section {
 }
 .header-item {
   display: block;
+  }
+.header-link {
   padding-top: 24px;
   padding-bottom: 24px;
-}
-.header-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -181,12 +182,12 @@ section {
   background-color: var(--dark-bgr);
   text-align: center;
 }
-.hero-conteiner{
+.hero-container{
 
 
 }
 .hero-title {
-  width: 496px;
+  max-width: 496px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 48px;
@@ -226,6 +227,7 @@ section {
 }
 .feature {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 .feature-title {
   color: var(--text-dark-color);
@@ -250,7 +252,7 @@ section {
 }
 .feature-item {
   display: block; 
-  width: calc((100% - (var(--indent) * var(--items)-1))) / var(--items);
+  flex-basis: calc((100% - 3 * 24px) / 4)
   text-align: start;
 }
 .feature-subtitle {
@@ -259,7 +261,7 @@ section {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--text-dark-color);
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .feature-text {
   font-size: 16px;
@@ -268,7 +270,7 @@ section {
   color: var(--text-font-color);
 }
 .works {
- padding: 120px 0;
+ padding-bottom: 120px;
 
 }
 .works-title {
@@ -279,7 +281,7 @@ section {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--text-dark-color);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .works-list {
   display: flex;
@@ -306,7 +308,7 @@ section {
   text-transform: capitalize;
   color: var(--text-dark-color);
   background-color: var(--lightgrey-bgr);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .team-list {
   display: flex;
@@ -317,25 +319,30 @@ section {
   
 }
 .team-item {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   background-color: var(--white-bgr);
 }
 .team-icon {
-  padding-bottom: 32px;
+}
+.team-text-content{
+  padding: 32px 16px;
 }
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--text-dark-color);
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .team-text {
   font-size: 16px;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-font-color);
-  padding-bottom: 32px;
 }
 /**
   |============================
@@ -366,7 +373,7 @@ section {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   gap: var(--indent);
 
 }
@@ -376,7 +383,7 @@ section {
   border: 1px solid var(--cornflower);
   background-color: #F4F4FD;
   border-radius: 4px;
-  padding: 12px 24px;
+  padding: 12px 24px; 
   text-align: center;
   display: block;
   background-color: var(--lightgrey-bgr);
@@ -386,11 +393,13 @@ section {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  border: 1px solid --standart-border-cl;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--focus-color);
   color: var(--white-color);
+  border: 1px solid transparent;
 }
 .portfolio-list {
   display: flex;
@@ -401,6 +410,7 @@ section {
   
 }
 .portfolio-item {
+  width: calc((100% - 48px) / 3);
 }
 .portfolio-link {
   text-decoration: none;
@@ -447,7 +457,7 @@ section {
 }
 .footer-logo {
   display: inline-block;
-  padding-bottom: 20px;
+ margin-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
