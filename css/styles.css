@@ -69,8 +69,6 @@ a .link {
   |============================
 */
 section {
-  padding-top: 60px;
-  padding-bottom: 60px;
   margin: 0 auto;
 }
 .container {
@@ -86,8 +84,6 @@ section {
 */
 .header {
   min-width: 1158px;
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid var(--cornflower);
   background:var(--white-bgr);
 }
@@ -99,6 +95,7 @@ section {
 .header-nav {
   display: flex;
   align-items: center;
+  
 }
 .header-logo {
   font-family: 'Raleway', sans-serif;
@@ -109,6 +106,7 @@ section {
   text-transform: uppercase;
   color: var(--logo-color);
   margin-right: 76px;
+  text-decoration: none;
 }
 .header-logo-black {
   font-style: normal;
@@ -120,13 +118,13 @@ section {
   align-items: flex-start;
   gap: var(--indent);
   padding-left: 0;
-  padding-right: 332px;
   --indent: 40px;
 }
 .header-item {
   display: block;
   }
 .header-link {
+  display: block;
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
@@ -134,6 +132,7 @@ section {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-dark-color);
+  text-decoration: none;
 }
 .header-link:hover,
 .header-link:focus {
@@ -190,8 +189,7 @@ section {
   max-width: 496px;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 48px;
-  padding-top: 48px;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -418,11 +416,6 @@ section {
 .portfolio-icon {
 }
 .portfolio-card-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-self: stretch;
   padding: 32px 16px;
   border:1px solid var(--cornflower);
   border-radius: 0px 0px 4px 4px;
@@ -457,7 +450,7 @@ section {
 }
 .footer-logo {
   display: inline-block;
- margin-bottom: 16px;
+  margin-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -465,6 +458,7 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-color);
+  text-decoration: none;
 }
 .footer-logo-white {
   font-family: 'Raleway', sans-serif;
